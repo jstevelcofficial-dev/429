@@ -1,62 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-TRF">
+  <meta name="description" content="Vintage 429 by Jerico Catay">
+  <meta name="author" content="Jerico Catay">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>429 | Vintage Style</title>
+
   <style>
     body {
       margin: 0;
+      padding: 0;
       font-family: "Courier New", monospace;
-      background: #1a1a1a;
-      color: #f2f2f2;
-      display: flex;
-      justify: center;
-      align-items: center;
-      height: 100vh;
-      background: radial-gradient(circle, #222 0%, #111 100%);
-      background-image: url('https://www.transparenttextures.com/patterns/fabric-of-squares.png');
+      background: url("https://www.toptal.com/designers/subtlepatterns/patterns/denim.webp");
       background-size: cover;
+      background-position: center;
+      color: #f2f2f2;
+      text-align: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     .logo {
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 5px;
-    }
-
-    .logo h1 {
-      font-size: 120px;
-      margin: 0;
+      font-size: 160px;
       font-weight: bold;
-      color: #f2f2f2;
-      text-shadow: 4px 4px 0px #111, 6px 6px 20px #00ff66;
+      letter-spacing: 5px;
+      text-shadow: 5px 5px 0px #000, -5px -5px 0px #2f802f;
     }
 
-    .logo h1 span:nth-child(1) {
-      color: #000000;
+    .logo span {
+      display: inline-block;
     }
-    .logo h1 span:nth-child(2) {
-      color: #ffffff;
-    }
-    .logo h1 span:nth-child(3) {
-      color: #00ff66;
-    }
+
+    .logo .black { color: black; }
+    .logo .white { color: white; }
+    .logo .green { color: #2f802f; }
 
     .tagline {
-      font-size: 20px;
-      color: #999;
-      margin-top: 15px;
-      letter–spacing: 3px;
+      font-size: 18px;
+      color: #f2f2f2;
+      opacity: 0.85;
+      margin-top: 10px;
+      text-shadow: 2px 2px 2px #000;
     }
   </style>
 </head>
+
 <body>
   <div class="logo">
-    <h1>
-      <span>4</span><span>2</span><span>9</span>
-    </h1>
-    <div class="tagline">Classic Vintage Vibes</div>
+    <span class="black">4</span><span class="white">2</span><span class="green">9</span>
   </div>
+  <div class="tagline">— Vintage Inspired by Jerico Catay —</div>
 </body>
 </html>
