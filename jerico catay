@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My One-Page Website</title>
+  <meta name="description" content="Simple responsive one-page site — edit content to personalize." />
+  <style>
+    /* Simple, modern, responsive CSS */
+    :root{
+      --maxw:1100px;
+      --accent:#0b76ef;
+      --bg:#f7f8fb;
+      --card:#ffffff;
+      --radius:12px;
+      --pad:18px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:#111;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);line-height:1.45}
+    .wrap{max-width:var(--maxw);margin:28px auto;padding:0 18px}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+    .brand{font-weight:700;letter-spacing:.4px}
+    nav{display:flex;gap:14px}
+    nav a{text-decoration:none;color:inherit;font-weight:600;opacity:.85}
+    .hero{background:linear-gradient(180deg,rgba(11,118,239,.06),transparent);padding:40px;border-radius:var(--radius);display:flex;gap:24px;align-items:center}
+    .hero .left{flex:1}
+    .hero h1{margin:0 0 8px;font-size:clamp(20px,3.6vw,36px)}
+    .cta{display:inline-block;margin-top:12px;padding:10px 16px;border-radius:10px;background:var(--accent);color:white;text-decoration:none;font-weight:700}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:20px}
+    .card{background:var(--card);padding:var(--pad);border-radius:12px;box-shadow:0 6px 18px rgba(12,20,40,.06)}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:22px}
+    footer{margin-top:26px;padding:18px 0;color:#555;text-align:center}
+    /* mobile nav */
+    .menu-btn{display:none;background:transparent;border:0;font-size:18px}
+    @media (max-width:720px){
+      header{align-items:flex-start}
+      .grid{grid-template-columns:1fr}
+      nav{display:none}
+      .menu-btn{display:block}
+    }
+    /* contact form small */
+    form{display:flex;flex-direction:column;gap:10px}
+    input,textarea{padding:10px;border-radius:8px;border:1px solid #e6e9ef;background:white}
+    button[type="submit"]{padding:10px;border-radius:8px;border:0;background:var(--accent);color:white;font-weight:700}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">BossSite</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn">☰</button>
+    </header>
+
+    <section class="hero" id="home">
+      <div class="left">
+        <h1>Hello — Welcome to your starter site</h1>
+        <p style="margin:0;color:#333">Madaling i-edit: palitan lang ang teksto, mga larawan, at kulay. Kasama na ang contact form (mailto) at portfolio grid.</p>
+        <a class="cta" href="#contact">Get in touch</a>
+      </div>
+      <div style="width:260px">
+        <div style="background:linear-gradient(180deg,#fff,#f4fbff);border-radius:12px;padding:12px;text-align:center">
+          <strong>Example</strong>
+          <div style="margin-top:12px;font-size:13px;color:#666">Use this block to show a product, logo or a photo.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" style="margin-top:18px">
+      <div class="card">
+        <h3 style="margin-top:0">About / Ano ito?</h3>
+        <p>Maikling pagpapakilala — ilagay ang mission, services, o kung anong gusto mong ipakita.</p>
+      </div>
+
+      <div class="grid">
+        <div>
+          <div class="cards">
+            <div class="card">
+              <h4>Service 1</h4>
+              <p>Short description ng service mo.</p>
+            </div>
+            <div class="card">
+              <h4>Service 2</h4>
+              <p>Short description ng service mo.</p>
+            </div>
+            <div class="card">
+              <h4>Service 3</h4>
+              <p>Short description ng service mo.</p>
+            </div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card">
+            <h4>Quick details</h4>
+            <p>Phone: +63 900 000 0000<br/>Email: you@example.com</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="work" style="margin-top:22px">
+      <h3>Portfolio / Work</h3>
+      <div class="cards">
+        <div class="card"><strong>Item A</strong><div style="margin-top:8px;color:#666">Short note</div></div>
+        <div class="card"><strong>Item B</strong><div style="margin-top:8px;color:#666">Short note</div></div>
+        <div class="card"><strong>Item C</strong><div style="margin-top:8px;color:#666">Short note</div></div>
+        <div class="card"><strong>Item D</strong><div style="margin-top:8px;color:#666">Short note</div></div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:22px">
+      <h3>Contact</h3>
+      <div class="card">
+        <form action="mailto:you@example.com" method="post" enctype="text/plain">
+          <input type="text" name="name" placeholder="Your name" required />
+          <input type="email" name="email" placeholder="Your email" required />
+          <textarea name="message" rows="4" placeholder="Message"></textarea>
+          <button type="submit">Send (opens email)</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="yr"></span> BossSite — Built with ❤️
+    </footer>
+  </div>
+
+  <script>
+    // small JS: toggles simple mobile nav and updates year
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    const btn = document.getElementById('menuBtn');
+    btn.addEventListener('click', ()=>{
+      const nav = document.querySelector('nav');
+      if(nav.style.display === 'flex') nav.style.display = 'none';
+      else nav.style.display = 'flex';
+      nav.style.flexDirection = 'column';
+      nav.style.position = 'absolute';
+      nav.style.right = '18px';
+      nav.style.top = '64px';
+      nav.style.background = 'white';
+      nav.style.padding = '10px';
+      nav.style.borderRadius = '8px';
+      nav.style.boxShadow = '0 8px 24px rgba(12,20,40,.08)';
+    });
+  </script>
+</body>
+</html>
