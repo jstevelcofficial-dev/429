@@ -3,12 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shop - 429 Vintage</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Shop | Vintage 429</title>
+  <style>
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #f9f9f9;
+      color: #222;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background: #fff;
+      padding: 20px 0;
+      border-bottom: 2px solid #111;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #111;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px;
+      gap: 30px;
+    }
+
+    .product {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 250px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .product img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .product h3 {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    .price {
+      color: #008000;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    footer {
+      background: #111;
+      color: #fff;
+      padding: 20px;
+      margin-top: 50px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>429 Vintage</h1>
+    <h1>429 Vintage Shop</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="shop.html">Shop</a>
@@ -17,18 +86,28 @@
     </nav>
   </header>
 
-  <section id="shop">
-    <h2>Shop Our Collection</h2>
+  <section class="products">
     <div class="product">
-      <img src="https://via.placeholder.com/200" alt="Vintage Denim Jacket">
+      <img src="https://via.placeholder.com/250" alt="Vintage Denim Jacket">
       <h3>Vintage Denim Jacket</h3>
-      <p>₱1,299</p>
-      <button>Add to Cart</button>
+      <p class="price">₱1,499</p>
+    </div>
+
+    <div class="product">
+      <img src="https://via.placeholder.com/250" alt="Retro Graphic Tee">
+      <h3>Retro Graphic Tee</h3>
+      <p class="price">₱799</p>
+    </div>
+
+    <div class="product">
+      <img src="https://via.placeholder.com/250" alt="Old School Cap">
+      <h3>Old School Cap</h3>
+      <p class="price">₱599</p>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 Vintage 429. All Rights Reserved.</p>
+    © 2025 Vintage 429. All Rights Reserved.
   </footer>
 </body>
 </html>
